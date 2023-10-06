@@ -4,7 +4,7 @@ import 'package:weather_app/data/dataSource/weather_data.dart';
 class WeatherRepository {
   final WeatherData _weatherData = WeatherData();
 
-  Future<List<WeatherModel>> getWeatherList() async {
+  Future<List<Item>> getWeatherList() async {
     return _weatherData.getWeatherList();
   }
 }
