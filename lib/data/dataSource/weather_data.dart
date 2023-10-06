@@ -6,7 +6,11 @@ class WeatherData {
   Future<List<Item>> getWeatherList() async {
     Dio dio = Dio();
 
-    final response = await dio.get(url);
+    String hour = nowHour();
+
+    final response = await dio.get(
+      '$url$serviceKey$pageSetting&base_date=$date&base_time=$hour$xy',
+    );
     var weatherData = WeatherModel.fromJson(response.data);
 
     return weatherData.response?.body?.items?.item ?? [];
