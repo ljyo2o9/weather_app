@@ -6,7 +6,7 @@ import 'package:weather_app/data/repository/weather_repository.dart';
 class WeatherViewModel extends ChangeNotifier {
   final WeatherRepository _weatherRepository = WeatherRepository();
 
-  List<Item> _weatherList = List.empty(growable: true);
+  List<Item> _weatherList = [];
 
   List<Item> get weatherList => _weatherList;
 
