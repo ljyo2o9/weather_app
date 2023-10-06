@@ -111,7 +111,7 @@ class Items {
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
     if (item != null) {
-      data['item'] = item!.map((v) => v).toList();
+      data['item'] = item!.map((v) => v.toJson()).toList();
     }
     return data;
   }
@@ -137,16 +137,25 @@ class Item {
       this.nx,
       this.ny});
 
-  factory Item.fromJson(Map<String, dynamic> json) {
-    return Item(
-      baseDate: json['baseDate'],
-      baseTime: json['baseDate'],
-      fcstDate: json['baseDate'],
-      fcstTime: json['baseDate'],
-      category: json['baseDate'],
-      fcstValue: json['baseDate'],
-      nx: json['baseDate'],
-      ny: json['baseDate'],
-    );
-  }
+  factory Item.fromJson(Map<String, dynamic> json) => Item(
+        baseDate: json['baseDate'],
+        baseTime: json['baseTime'],
+        category: json['category'],
+        fcstDate: json['fcstDate'],
+        fcstTime: json['fcstTime'],
+        fcstValue: json['fcstValue'],
+        nx: json['nx'],
+        ny: json['ny'],
+      );
+
+  Map<String, dynamic> toJson() => {
+        'baseDate': baseDate,
+        'baseTime': baseTime,
+        'category': category,
+        'fcstDate': fcstDate,
+        'fcstTime': fcstTime,
+        'fcstValue': fcstValue,
+        'nx': nx,
+        'ny': ny,
+      };
 }
