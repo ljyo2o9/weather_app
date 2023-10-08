@@ -21,24 +21,22 @@ class WeatherViewModel extends ChangeNotifier {
   Future<void> _getWeatherList() async {
     _weatherList = await _weatherRepository.getWeatherList();
 
-    print(hourModel);
-
     for (int i = 0; i < _weatherList.length; i++) {
       if (_weatherList[i].fcstTime == ('${hourModel}00')) {
         if (_weatherList[i].category == "TMP") {
           _category = {
-            'tmp': _weatherList[i].fcstValue.toString(),
-            'uuu': _weatherList[i + 1].fcstValue.toString(),
-            'vvv': _weatherList[i + 2].fcstValue.toString(),
-            'vec': _weatherList[i + 3].fcstValue.toString(),
-            'wsd': _weatherList[i + 4].fcstValue.toString(),
-            'sky': _weatherList[i + 5].fcstValue.toString(),
-            'pty': _weatherList[i + 6].fcstValue.toString(),
-            'pop': _weatherList[i + 7].fcstValue.toString(),
-            'wav': _weatherList[i + 8].fcstValue.toString(),
-            'pcp': _weatherList[i + 9].fcstValue.toString(),
-            'reh': _weatherList[i + 10].fcstValue.toString(),
-            'sno': _weatherList[i + 11].fcstValue.toString(),
+            'tmp': _weatherList[i].fcstValue,
+            'uuu': _weatherList[i + 1].fcstValue,
+            'vvv': _weatherList[i + 2].fcstValue,
+            'vec': _weatherList[i + 3].fcstValue,
+            'wsd': _weatherList[i + 4].fcstValue,
+            'sky': _weatherList[i + 5].fcstValue,
+            'pty': _weatherList[i + 6].fcstValue,
+            'pop': _weatherList[i + 7].fcstValue,
+            'wav': _weatherList[i + 8].fcstValue,
+            'pcp': _weatherList[i + 9].fcstValue,
+            'reh': _weatherList[i + 10].fcstValue,
+            'sno': _weatherList[i + 11].fcstValue,
           };
         }
       }
