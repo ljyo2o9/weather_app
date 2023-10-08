@@ -57,6 +57,33 @@ class _HomePageState extends State<HomePage> {
                       ),
                     ),
                   ),
+                  //
+                  /// 온도
+                  int.parse(weatherViewModel.category['tmp']) < 0
+                      ? Padding(
+                          padding: EdgeInsets.only(top: 31.h),
+                          child: Text(
+                            '${weatherViewModel.category['tmp']}°',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 165.sp,
+                              fontFamily: 'Roboto',
+                              fontWeight: FontWeight.w900,
+                            ),
+                          ),
+                        )
+                      : Padding(
+                          padding: EdgeInsets.only(top: 25.h),
+                          child: Text(
+                            '${weatherViewModel.category['tmp']}°',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 200.sp,
+                              fontFamily: 'Roboto',
+                              fontWeight: FontWeight.w900,
+                            ),
+                          ),
+                        ),
                 ],
               ),
             )
