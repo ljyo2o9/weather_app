@@ -14,11 +14,25 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    var viewModel = Provider.of<WeatherViewModel>(context);
+    var weatherViewModel = Provider.of<WeatherViewModel>(context);
     return Scaffold(
-      body: viewModel.weatherList.isNotEmpty
-          ? Column(
-              children: [],
+      body: weatherViewModel.weatherList.isNotEmpty
+          ? Padding(
+              padding: EdgeInsets.only(left: 31.w, right: 31.w),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  /// Divider
+                  Padding(
+                    padding: EdgeInsets.only(top: 132.h),
+                    child: Container(
+                      color: Colors.black,
+                      width: double.infinity,
+                      height: 1.h,
+                    ),
+                  ),
+                ],
+              ),
             )
           : const Center(child: CircularProgressIndicator()),
     );
