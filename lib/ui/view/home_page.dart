@@ -43,6 +43,19 @@ class _HomePageState extends State<HomePage> {
                         fontWeight: FontWeight.w700,
                       ),
                     ),
+                  ), //
+                  /// 날짜
+                  Padding(
+                    padding: EdgeInsets.only(top: 17.h),
+                    child: Text(
+                      'Wednesday - 29 May',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 24.3.sp,
+                        fontFamily: 'Roboto',
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
                   ),
                 ],
               ),
