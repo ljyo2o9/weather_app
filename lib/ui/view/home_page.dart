@@ -30,6 +30,19 @@ class _HomePageState extends State<HomePage> {
                       width: double.infinity,
                       height: 1.h,
                     ),
+                  ), //
+                  /// 지역
+                  Padding(
+                    padding: EdgeInsets.only(top: 40.h),
+                    child: Text(
+                      'Helsinki',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 24.3.sp,
+                        fontFamily: 'Roboto',
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
                   ),
                 ],
               ),
