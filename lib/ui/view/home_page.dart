@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 
 import 'package:weather_app/ui/viewModel/weather_view_model.dart';
+import 'package:weather_app/ui/viewModel/week_view_model.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -14,15 +15,21 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    /// weekViewModel
+    var weekViewModel = Provider.of<WeekViewModel>(context);
+    //
+    /// 요일
+    String dayOfWeek = weekViewModel.dayOfWeek;
+
     /// weatherViewModel
     var weatherViewModel = Provider.of<WeatherViewModel>(context);
-
+    //
     /// 온도
     final tmp = weatherViewModel.category['tmp'];
-
+    //
     /// 풍속
     final wsd = weatherViewModel.category['wsd'];
-
+    //
     ///강수 확률
     final pop = weatherViewModel.category['pop'];
 
@@ -59,7 +66,7 @@ class _HomePageState extends State<HomePage> {
                   Padding(
                     padding: EdgeInsets.only(top: 17.h),
                     child: Text(
-                      'Wednesday - 29 May',
+                      '$dayOfWeek - 29 May',
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 24.3.sp,
