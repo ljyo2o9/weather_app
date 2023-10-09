@@ -7,3 +7,11 @@ class WeekRepository {
     return _weekData.getWeekData();
   }
 }
+
+class MonthRepository {
+  final MonthData _monthData = MonthData();
+
+  Future<String> getMonthData() async {
+    return _monthData.getMonthData();
+  }
+}
