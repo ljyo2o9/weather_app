@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage> {
                   Padding(
                     padding: EdgeInsets.only(top: 40.h),
                     child: Text(
-                      'Helsinki',
+                      '유성구',
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 24.3.sp,
