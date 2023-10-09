@@ -5,6 +5,8 @@ import 'package:provider/provider.dart';
 import 'package:weather_app/ui/viewModel/weather_view_model.dart';
 import 'package:weather_app/ui/viewModel/date_view_model.dart';
 
+import 'package:weather_app/ui/function/row_category.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -123,34 +125,8 @@ class _HomePageState extends State<HomePage> {
                   ),
                   Padding(
                     padding: EdgeInsets.only(top: 48.h),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        //
-                        /// 풍속
-                        Text(
-                          'Wind: ${wsd}m/s',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 16.3.sp,
-                            fontFamily: 'Roboto',
-                            fontWeight: FontWeight.w500,
-                          ),
-                        ),
-                        //
-                        /// 강수 확률
-                        Text(
-                          'Probability: $pop%',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 16.3.sp,
-                            fontFamily: 'Roboto',
-                            fontWeight: FontWeight.w500,
-                          ),
-                        )
-                      ],
-                    ),
-                  )
+                    child: rowCategory('Wind: ${wsd}m/s', 'Probability: $pop%'),
+                  ),
                 ],
               ),
             )
