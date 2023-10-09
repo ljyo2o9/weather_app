@@ -121,41 +121,31 @@ class Item {
   String? baseDate;
   String? baseTime;
   String? category;
-  String? fcstDate;
-  String? fcstTime;
-  String? fcstValue;
   int? nx;
   int? ny;
+  String? obsrValue;
 
   Item(
       {this.baseDate,
       this.baseTime,
       this.category,
-      this.fcstDate,
-      this.fcstTime,
-      this.fcstValue,
       this.nx,
-      this.ny});
+      this.ny,
+      this.obsrValue});
 
   factory Item.fromJson(Map<String, dynamic> json) => Item(
-        baseDate: json['baseDate'],
-        baseTime: json['baseTime'],
-        category: json['category'],
-        fcstDate: json['fcstDate'],
-        fcstTime: json['fcstTime'],
-        fcstValue: json['fcstValue'],
-        nx: json['nx'],
-        ny: json['ny'],
-      );
+      baseDate: json['baseDate'],
+      baseTime: json['baseTime'],
+      category: json['category'],
+      nx: json['nx'],
+      ny: json['ny'],
+      obsrValue: json['obsrValue']);
 
   Map<String, dynamic> toJson() => {
         'baseDate': baseDate,
         'baseTime': baseTime,
-        'category': category,
-        'fcstDate': fcstDate,
-        'fcstTime': fcstTime,
-        'fcstValue': fcstValue,
         'nx': nx,
         'ny': ny,
+        'obsrValue': obsrValue,
       };
 }
