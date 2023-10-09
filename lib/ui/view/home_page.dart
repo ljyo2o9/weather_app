@@ -42,7 +42,9 @@ class _HomePageState extends State<HomePage> {
               .toStringAsFixed(0);
       //
       /// 풍속
-      final wsd = weatherViewModel.weatherList[7].obsrValue;
+      final wsd =
+          double.parse(weatherViewModel.weatherList[7].obsrValue.toString())
+              .toStringAsFixed(0);
       //
       ///강수 확률
       final pop = weatherViewModel.weatherList[0].obsrValue;
