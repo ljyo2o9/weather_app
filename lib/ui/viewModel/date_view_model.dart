@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:weather_app/data/repository/week_repository.dart';
+import 'package:weather_app/data/repository/date_repository.dart';
 
-class WeekViewModel extends ChangeNotifier {
+class DateViewModel extends ChangeNotifier {
   final WeekRepository _weekRepository = WeekRepository();
 
   String _dayOfWeek = '';
 
   String get dayOfWeek => _dayOfWeek;
 
-  WeekViewModel() {
+  DateViewModel() {
     _getDayOfWeek();
   }
 

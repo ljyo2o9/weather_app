@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 
 import 'package:weather_app/ui/viewModel/weather_view_model.dart';
-import 'package:weather_app/ui/viewModel/week_view_model.dart';
+import 'package:weather_app/ui/viewModel/date_view_model.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     /// weekViewModel
-    var weekViewModel = Provider.of<WeekViewModel>(context);
+    var weekViewModel = Provider.of<DateViewModel>(context);
     //
     /// 요일
     String dayOfWeek = weekViewModel.dayOfWeek;

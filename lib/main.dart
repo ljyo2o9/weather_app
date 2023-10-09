@@ -4,14 +4,14 @@ import 'package:provider/provider.dart';
 
 import 'package:weather_app/ui/view/home_page.dart';
 import 'package:weather_app/ui/viewModel/weather_view_model.dart';
-import 'package:weather_app/ui/viewModel/week_view_model.dart';
+import 'package:weather_app/ui/viewModel/date_view_model.dart';
 
 void main() {
   runApp(
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => WeatherViewModel()),
-        ChangeNotifierProvider(create: (context) => WeekViewModel()),
+        ChangeNotifierProvider(create: (context) => DateViewModel()),
       ],
       child: const MyApp(),
     ),
