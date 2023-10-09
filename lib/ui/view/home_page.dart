@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
               .toStringAsFixed(0);
       //
       ///강수 확률
-      final pop = weatherViewModel.weatherList[0].obsrValue;
+      final reh = weatherViewModel.weatherList[1].obsrValue;
       return Scaffold(
         body: Padding(
           padding: EdgeInsets.only(left: 31.w, right: 31.w),
@@ -131,7 +131,7 @@ class _HomePageState extends State<HomePage> {
               /// RowCategory
               Padding(
                 padding: EdgeInsets.only(top: 48.h),
-                child: rowCategory('Wind: ${wsd}m/s', 'Probability: $pop%'),
+                child: rowCategory('Wind: ${wsd}m/s', 'Humidity: $reh%'),
               ),
             ],
           ),
