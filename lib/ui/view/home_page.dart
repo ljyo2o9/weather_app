@@ -16,10 +16,10 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     /// weekViewModel
-    var weekViewModel = Provider.of<DateViewModel>(context);
+    var dateViewModel = Provider.of<DateViewModel>(context);
     //
     /// 요일
-    String dayOfWeek = weekViewModel.dayOfWeek;
+    String dayOfWeek = dateViewModel.dayOfWeek;
     //
     /// 일
     var day = DateTime.now().day;
