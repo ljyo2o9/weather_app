@@ -23,6 +23,9 @@ class _HomePageState extends State<HomePage> {
     /// 풍속
     final wsd = weatherViewModel.category['wsd'];
 
+    ///강수 확률
+    final pop = weatherViewModel.category['pop'];
+
     return Scaffold(
       body: weatherViewModel.weatherList.isNotEmpty
           ? Padding(
@@ -119,6 +122,17 @@ class _HomePageState extends State<HomePage> {
                             fontWeight: FontWeight.w500,
                           ),
                         ),
+                        //
+                        /// 강수 확률
+                        Text(
+                          'Probability: $pop%',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 16.3.sp,
+                            fontFamily: 'Roboto',
+                            fontWeight: FontWeight.w500,
+                          ),
+                        )
                       ],
                     ),
                   )
