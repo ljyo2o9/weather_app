@@ -119,7 +119,7 @@ class _HomePageState extends State<HomePage> {
 
               /// 날씨
               Text(
-                'It\'s sun time',
+                weatherViewModel.comment,
                 style: TextStyle(
                   fontSize: 24.sp,
                   fontFamily: 'Roboto',
