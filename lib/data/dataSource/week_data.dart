@@ -1,13 +1,11 @@
 class WeekData {
   Future<String> getWeekData() async {
-    String dayOfWeek = _getDayOfWeek(DateTime
-        .now()
-        .weekday);
+    String dayOfWeek = await _getDayOfWeek(DateTime.now().weekday);
 
     return dayOfWeek;
   }
 
-  String _getDayOfWeek(int weekday) {
+  Future<String> _getDayOfWeek(int weekday) async {
     switch (weekday) {
       case DateTime.monday:
         return 'Monday';
