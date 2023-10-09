@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-Row row_Category(dynamic a, dynamic b) {
+Row rowCategory(dynamic a, dynamic b) {
   return Row(
     mainAxisAlignment: MainAxisAlignment.spaceBetween,
     children: [
