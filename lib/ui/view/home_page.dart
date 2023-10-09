@@ -22,7 +22,12 @@ class _HomePageState extends State<HomePage> {
     String dayOfWeek = dateViewModel.dayOfWeek;
     //
     /// 일
-    var day = DateTime.now().day;
+    var day = DateTime.now().day >= 10
+        ? DateTime.now().day
+        : '0${DateTime.now().day}';
+    //
+    /// 월
+    String month = dateViewModel.monthData;
 
     /// weatherViewModel
     var weatherViewModel = Provider.of<WeatherViewModel>(context);
@@ -69,7 +74,7 @@ class _HomePageState extends State<HomePage> {
                   Padding(
                     padding: EdgeInsets.only(top: 17.h),
                     child: Text(
-                      '$dayOfWeek - $day May',
+                      '$dayOfWeek - $day $month',
                       style: TextStyle(
                         color: Colors.black,
                         fontSize: 24.3.sp,
