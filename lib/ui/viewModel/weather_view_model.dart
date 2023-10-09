@@ -29,6 +29,9 @@ class WeatherViewModel extends ChangeNotifier {
       case '3':
       case '7':
         return 'It\'s snowing';
+      case '2':
+      case '6':
+        return 'Sleet is falling';
       default:
         return '';
     }
