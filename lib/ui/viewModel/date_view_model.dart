@@ -13,7 +13,7 @@ class DateViewModel extends ChangeNotifier {
   }
 
   Future<void> _getDayOfWeek() async {
-    _dayOfWeek = await _weekRepository.getDayOfWeeky();
+    _dayOfWeek = await _weekRepository.getDayOfWeek();
     notifyListeners();
   }
 }
