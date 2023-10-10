@@ -6,6 +6,8 @@ import 'package:weather_app/ui/viewModel/weather_view_model.dart';
 import 'package:weather_app/ui/viewModel/date_view_model.dart';
 
 import 'package:weather_app/ui/function/row_category.dart';
+import 'package:weather_app/ui/function/menu_bar.dart';
+import 'package:weather_app/ui/function/refrash_route_animation.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -56,11 +58,32 @@ class _HomePageState extends State<HomePage> {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  GestureDetector(
+                    onTap: () {},
+                    child: menuBar(),
+                  ),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushAndRemoveUntil(
+                          context, refrashRoute(), (route) => false);
+                    },
+                    child: const Icon(Icons.refresh),
+                  )
+                ],
+              ),
+
               /// Divider
-              Container(
-                color: Colors.black,
-                width: double.infinity,
-                height: 1.h,
+              Padding(
+                padding: EdgeInsets.only(top: 38.h),
+                child: Container(
+                  color: Colors.black,
+                  width: double.infinity,
+                  height: 1.h,
+                ),
               ), //
               /// 지역
               Padding(
