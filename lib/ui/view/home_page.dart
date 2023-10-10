@@ -48,20 +48,19 @@ class _HomePageState extends State<HomePage> {
       //
       ///강수 확률
       final reh = weatherViewModel.weatherList[1].obsrValue;
+
       return Scaffold(
         body: Padding(
           padding: EdgeInsets.only(left: 31.w, right: 31.w),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               /// Divider
-              Padding(
-                padding: EdgeInsets.only(top: 132.h),
-                child: Container(
-                  color: Colors.black,
-                  width: double.infinity,
-                  height: 1.h,
-                ),
+              Container(
+                color: Colors.black,
+                width: double.infinity,
+                height: 1.h,
               ), //
               /// 지역
               Padding(
@@ -130,8 +129,15 @@ class _HomePageState extends State<HomePage> {
               //
               /// RowCategory
               Padding(
-                padding: EdgeInsets.only(top: 48.h),
+                padding: EdgeInsets.only(top: 48.h, bottom: 40.h),
                 child: rowCategory('Wind: ${wsd}m/s', 'Humidity: $reh%'),
+              ),
+
+              /// Divider
+              Container(
+                color: Colors.black,
+                width: double.infinity,
+                height: 1.h,
               ),
             ],
           ),
